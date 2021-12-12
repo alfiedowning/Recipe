@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F4720A0276645F1002E9F95 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47209F276645F1002E9F95 /* TabBarView.swift */; };
 		3F4720BC276659F9002E9F95 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4720BB276659F9002E9F95 /* CardDetailView.swift */; };
 		3F4720BE2766762F002E9F95 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4720BD2766762F002E9F95 /* ProfileView.swift */; };
+		3F4720C0276678EB002E9F95 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4720BF276678EB002E9F95 /* TabView.swift */; };
 		3F9664A72765136C004C5CB0 /* RecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9664A62765136C004C5CB0 /* RecipeApp.swift */; };
 		3F9664AB2765136D004C5CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9664AA2765136D004C5CB0 /* Assets.xcassets */; };
 		3F9664AE2765136D004C5CB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9664AD2765136D004C5CB0 /* Preview Assets.xcassets */; };
@@ -19,9 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F47209F276645F1002E9F95 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		3F4720BB276659F9002E9F95 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		3F4720BD2766762F002E9F95 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3F4720BF276678EB002E9F95 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		3F9664A32765136C004C5CB0 /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9664A62765136C004C5CB0 /* RecipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeApp.swift; sourceTree = "<group>"; };
 		3F9664AA2765136D004C5CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 				3F9664B627653015004C5CB0 /* NewRecipeCardView.swift */,
 				3F9664B827654B98004C5CB0 /* HomeView.swift */,
 				3F4720BD2766762F002E9F95 /* ProfileView.swift */,
-				3F47209F276645F1002E9F95 /* TabBarView.swift */,
+				3F4720BF276678EB002E9F95 /* TabView.swift */,
 				3F9664AA2765136D004C5CB0 /* Assets.xcassets */,
 				3F9664AC2765136D004C5CB0 /* Preview Content */,
 			);
@@ -155,8 +155,8 @@
 				3F9664B727653015004C5CB0 /* NewRecipeCardView.swift in Sources */,
 				3F9664A72765136C004C5CB0 /* RecipeApp.swift in Sources */,
 				3F9664B927654B98004C5CB0 /* HomeView.swift in Sources */,
-				3F4720A0276645F1002E9F95 /* TabBarView.swift in Sources */,
 				3F9664B527652463004C5CB0 /* ReccommendedCardView.swift in Sources */,
+				3F4720C0276678EB002E9F95 /* TabView.swift in Sources */,
 				3F4720BE2766762F002E9F95 /* ProfileView.swift in Sources */,
 				3F4720BC276659F9002E9F95 /* CardDetailView.swift in Sources */,
 			);

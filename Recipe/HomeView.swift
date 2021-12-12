@@ -11,6 +11,7 @@ struct HomeView: View {
     @State var selectedIndex = 0
     @State var recipe: String = ""
     @State var currrentRecipe: Int = 0
+    @Binding var showTabBar: Bool
     let images = [
         "house",
         "heart",
@@ -18,20 +19,20 @@ struct HomeView: View {
         "cart",
     ]
     var body: some View {
-        NavigationView {
-         
+        VStack {
             
-                
-                ScrollView(showsIndicators: false) {
-                    
-                    VStack(alignment: .leading) {
-                
-                Text("Reccommended")
-                    .font(.custom("Avenir-Light", size: 18))
-                    .bold()
-                    .padding(.leading)
-                    .padding(.top, 50)
-                
+            ProfileView(recipe: $recipe, showTabBar: $showTabBar)
+                .frame(height: 150)
+            
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading) {
+                HStack {
+                    Text("Reccommended")
+                        .font(.custom("Avenir-Light", size: 18))
+                        .bold()
+                        .padding(.leading)
+                    Spacer()
+                }
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
@@ -49,33 +50,23 @@ struct HomeView: View {
                 
                 }
                 
-                Text("New Recipes")
-                    .font(.custom("Avenir-Light", size: 18))
-                    .bold()
-                    .padding([.top, .leading])
-                
-             
-                    ForEach(0..<4) {i in
-                NewRecipeCardView()
-                            .edgesIgnoringSafeArea(.all)
+                    Text("New Recipes")
+                        .font(.custom("Avenir-Light", size: 18))
+                        .bold()
+                        .padding([.top, .leading])
                     
-                }
+                 
+                        ForEach(0..<4) {i in
+                    NewRecipeCardView()
+                                .edgesIgnoringSafeArea(.all)
+                        
                     }
-            
                 
-                
-                
-                Spacer()
                 
                 }
+                
+               
+            
             }
-        .navigationBarHidden(true)
         }
-    }
-
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+    }}

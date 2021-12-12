@@ -1,5 +1,5 @@
 //
-//  TabBarView.swift
+//  TabView.swift
 //  Recipe
 //
 //  Created by Alfie Downing on 12/12/2021.
@@ -7,13 +7,10 @@
 
 import SwiftUI
 
-
-
-struct TabBarView: View {
+struct TabView: View {
+    @State var recipe = ""
+    @State var showTabBar = true
     @State var selectedIndex = 0
-    @State var recipe: String = ""
-    @State var currrentRecipe: Int = 0
-    @State var showTabBar: Bool = true
     let images = [
         "house",
         "heart",
@@ -21,35 +18,28 @@ struct TabBarView: View {
         "cart",
     ]
     var body: some View {
-        NavigationView {
+        
         ZStack {
-            Rectangle()
-                .ignoresSafeArea()
-                .foregroundColor(Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.07))
-            
             switch selectedIndex {
             case 0:
-                HomeView()
+                HomeView(showTabBar: $showTabBar)
             case 1:
-                Text("Favourites")
+                Text("Favourite")
             case 2:
-                Text("All recipes")
+                Text("List")
             case 3:
                 Text("Cart")
             default:
-                HomeView()
+                HomeView(showTabBar: $showTabBar)
             }
-            
-            ProfileView(recipe: $recipe, showTabBar: $showTabBar)
-            
+          
             
             
-                
-            // Tab Bar
-            if recipe=="" && showTabBar == true {
+            
+            if showTabBar == true && recipe == "" {
+        
             VStack {
                 Spacer()
-            
                 Rectangle()
                     .frame(width: 300, height: 80)
                     .foregroundColor(Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.3))
@@ -64,7 +54,7 @@ struct TabBarView: View {
                                     if selectedIndex == i {
                                         Image(systemName: images[i])
                                            .font(.system(size: 25))
-                                           .foregroundColor(selectedIndex == i ? .blue : .white)
+                                           .foregroundColor(selectedIndex == i ? .black : .white)
                                         
                                     }
                                     
@@ -83,18 +73,18 @@ struct TabBarView: View {
       
                         }
                     }
-                    .cornerRadius(20)
+                .cornerRadius(20)
             }
+        
             }
-            }
-    
-        .navigationBarHidden(true)
+        
         }
-    }
-}
-struct TabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarView()
+        
     }
 }
 
+struct Test_Previews: PreviewProvider {
+    static var previews: some View {
+        TabView()
+    }
+}
