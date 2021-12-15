@@ -12,7 +12,8 @@ struct ReccommendedCardView: View {
     var body: some View {
         VStack {
         Spacer().fullScreenCover(isPresented: $show) {
-            CardDetailView(show: $show)
+            //CardDetailView(show: $show)
+            CardDetailView()
         }
 
         
@@ -20,7 +21,7 @@ struct ReccommendedCardView: View {
         Button {
             show.toggle()
         } label: {
-            Image("avocado-toast")
+            Image("avocado-toast-m")
                         .resizable()
                         .frame(width: 280, height: 450)
                     .aspectRatio(contentMode: .fit)

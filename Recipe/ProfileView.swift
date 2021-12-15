@@ -44,12 +44,12 @@ struct ProfileView: View {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.gray)
                         .padding(.leading,30)
-                    TextField("Find recipe", text: $recipe,onEditingChanged: { _ in
-                        showTabBar.toggle()
-                    }, onCommit:  {
-                        print(recipe)
-                        recipe=""
-                    })
+                    TextField("Find recipe", text: $recipe)
+                        .onTapGesture {
+                            showTabBar.toggle()
+                            recipe=""
+                            
+                        }
                     
                 }
             }

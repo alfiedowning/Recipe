@@ -26,7 +26,7 @@ struct TabView: View {
             case 1:
                 Text("Favourite")
             case 2:
-                Text("List")
+               Categories()
             case 3:
                 Text("Cart")
             default:
@@ -54,7 +54,7 @@ struct TabView: View {
                                     if selectedIndex == i {
                                         Image(systemName: images[i])
                                            .font(.system(size: 25))
-                                           .foregroundColor(selectedIndex == i ? .black : .white)
+                                           .foregroundColor(selectedIndex == i ? .blue : .white)
                                         
                                     }
                                     
